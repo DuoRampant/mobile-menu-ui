@@ -1,0 +1,66 @@
+name: Bug Report
+description: Report something that is broken or not working as expected
+labels: [bug, triage]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug. Please fill out the details below so it can be reproduced and fixed quickly.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug description
+      description: A clear and concise description of what the bug is.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open the studio at '...'
+        2. Select menu style '...'
+        3. Click on '...'
+        4. See error
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Affected area
+      options:
+        - Phone simulator
+        - Menu styles (bottom navigation)
+        - Customizer
+        - Code exporter
+        - Preset library / Supabase
+        - Build / tooling
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: browser
+    attributes:
+      label: Browser
+      placeholder: e.g. Chrome 131, Safari 18
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Console output / screenshots
+      description: Paste any console errors or attach screenshots.
+      render: shell
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I have searched existing issues to avoid duplicates
+          required: true
+        - label: I am using the latest version of the repository
+          required: true

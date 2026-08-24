@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Live Demo
+    url: https://duorampant.github.io/mobile-menu-ui/
+    about: Try the studio before opening an issue — the bug may already be fixed in the deployed version.

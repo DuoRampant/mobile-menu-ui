@@ -1,0 +1,57 @@
+name: Feature Request
+description: Suggest an idea or improvement for Mobile Menu UI
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the suggestion! Please describe your idea as concretely as possible.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem / motivation
+      description: What are you trying to achieve? What limitation do you hit?
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed solution
+      description: What would you like to happen? Include sketches, references or examples if possible.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Related area
+      options:
+        - New menu style
+        - Phone simulator
+        - Customizer
+        - Code exporter
+        - Preset library / Supabase
+        - Accessibility / RTL
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: willingness
+    attributes:
+      label: Would you like to work on this yourself?
+      options:
+        - 'Yes — I can open a pull request'
+        - 'No — just suggesting the idea'
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I have searched existing issues to avoid duplicates
+          required: true
